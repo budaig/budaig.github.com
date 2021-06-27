@@ -12,6 +12,7 @@ debug.log
 cmd2Ruby.lnk
 *.bat
 4gcbdg
+4rxz.pub
 4rxz
 .gitignore
 _config.yml4site
@@ -19,3 +20,4 @@ _config.yml4site
 deploy.shdatanext
 amp-template/
 *.txt
+pnpm-lock.yaml
