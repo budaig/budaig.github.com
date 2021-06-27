@@ -22,7 +22,7 @@ jobs:
       # 设置 node.js 环境
       uses: actions/setup-node@v1
       with:
-        node-version: '12.x'
+        node-version: '10'
 
     - name: Cache node modules
       # 设置包缓存目录，避免每次下载
@@ -53,7 +53,6 @@ jobs:
         rm -rf ~/.ssh
         mkdir -p ~/.ssh/
         echo "$ACTION_DEPLOY_KEY" > ~/.ssh/id_rsa
-        chmod 700 ~/.ssh
         chmod 600 ~/.ssh/id_rsa
         ssh-keyscan github.com >> ~/.ssh/known_hosts
         hexo deploy
