@@ -11,7 +11,7 @@ env:
 
 jobs:
   RXZ CI:
-    name: Hexo blog build & deploy
+    - name: Hexo blog build & deploy
     runs-on: ubuntu-latest # 使用最新的 Ubuntu 系统作为编译部署的环境
 
     steps:
