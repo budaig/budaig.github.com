@@ -681,7 +681,7 @@ valine:
 # Waline
 # For more information: https://waline.js.org, https://github.com/walinejs/waline
 waline:
-  enable: true
+  enable: false
   serverURL: https://waline.vercel.app # Waline server address url
   placeholder: 闻言如见其人 # Comment box placeholder
   dark: auto # Dark mode css selector, for more information: https://waline.js.org/client/basic.html#dark
