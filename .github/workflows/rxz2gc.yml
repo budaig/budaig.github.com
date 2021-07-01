@@ -59,8 +59,8 @@ jobs:
         Coding_Username: ${{ secrets.User_Codin }}
       # 将编译后的博客文件推送到指定仓库
       run: |
-        git config --global user.name "GitHub用户名"
-        git config --global user.email "GitHub邮箱"
+        git config --global user.name "budaig"
+        git config --global user.email "imovomi@gmail.com"
         git clone https://${Github_Pages} .github_pages
         git clone https://${Coding_Username}:${Coding_Token}@${Coding_Pages} .coding_pages
         hexo deploy
