@@ -27,11 +27,6 @@ jobs:
       run: |
         git log --pretty=format:"%s from Github Actions at `date +"%Y-%m-%d %H:%M:%S"`" --date=short -n 1  > commit-message.log
 
-    - name: Install hexo
-      # 下载 hexo-cli 脚手架及相关安装包
-      run: |
-        npm install hexo-cli -g
-
     - name: Cache node modules
       # 设置包缓存目录，避免每次下载
       uses: actions/cache@v1
@@ -40,6 +35,12 @@ jobs:
         path: ~/.npm
         key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
 
+    - name: Install hexo
+      # 下载 hexo-cli 脚手架及相关安装包
+      run: |
+        npm install hexo-cli -g --no-audit
+        npm install --no-audit
+        
     - name: Install dependencies
       # 下载 hexo-cli 脚手架及相关安装包
       if: steps.cache-modules.outputs.cache-hit != 'true'

@@ -16,8 +16,8 @@ cmd2Ruby.lnk
 4rxz
 .gitignore
 _config.yml4site
-.travis.ymldatanext
-deploy.shdatanext
+.travis.yml
+deploy.sh
 amp-template/
 *.txt
 pnpm-lock.yaml
