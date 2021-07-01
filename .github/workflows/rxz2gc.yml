@@ -40,6 +40,7 @@ jobs:
       run: |
         npm install hexo-cli -g --no-audit
         npm install --no-audit
+        npm uninstall hexo-generator-restful
         
     - name: Install dependencies
       # 下载 hexo-cli 脚手架及相关安装包
@@ -87,5 +88,5 @@ jobs:
         cd ./public/
         git add .
         git commit -F ../commit-message.log
-        git push --force --quiet "https://${Coding_Username}:${Coding_Token}@${Coding_Pages}" coding-pages:coding-pages     
+        git push --force --quiet "https://${Coding_Username}:${Coding_Token}@${Coding_Pages}" master:master     
       
