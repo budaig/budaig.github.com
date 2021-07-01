@@ -21,3 +21,4 @@ deploy.sh
 amp-template/
 *.txt
 pnpm-lock.yaml
+.gitcommit
