@@ -7,11 +7,11 @@ comments: true
   
 一时兴趣，折腾出来这么一个小站。算是个人的随想记录吧。  
 主要记载和备份个人对国学经典的感悟，中医名博文章的随想。  
-日新知 http://rixin.win , 托管在 Coding.net 上，基于 hexo 。  
+日新知 http://www.rixin.win , 托管在 Coding.net 上，基于 hexo 。  
 
 
 **RSS 订阅网址：**  
-http://rixin.win/atom.xml 
+http://www.rixin.win/atom.xml 
   
 RSS （简易信息聚合）阅读器可以更方便的浏览小站文章。  
 
