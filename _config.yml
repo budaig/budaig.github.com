@@ -31,7 +31,7 @@ keyword: 日新知 知诺 布袋小知诺 布袋知诺 zhinuo 知行诺一 # you
 # url: http://www.zhinuo.space
 # url: http://bdg.zhinuo.space
 # url: http://www.zhinuo.site
-url: https://www.rixin.site
+url: http://www.rixin.win
 root: / 
 permalink: article/:abbrlink.html      # :category/:id.html   #:id-:title.html
 permalink_default:
@@ -140,7 +140,7 @@ deploy: # github coding 同时部署
 - type: git
   repo: 
      github: git@gitbdg:budaig/budaig.github.com.git,master
-     coding: git@e.coding.net:budaig/budaig/budaig.git,coding-pages
+     coding: git@e.coding.net:budaim/budaim.git,coding-pages
      #coding: git@codingbdg:budaig/budaig.git,coding-pages
 - type: baidu_url_submitter
 # - type: baidu_xz_url_submitter
@@ -176,7 +176,7 @@ abbrlink:
 
 baidu_url_submit:
   count: 3 ## 比如3，代表提交最新的三个链接
-  host: www.rixin.site ## 在百度站长平台中注册的域名
+  host: blog.rixin.win ## 在百度站长平台中注册的域名
   token: L4PiiYWHNRZdoIF8 ## 请注意这是您的秘钥，请不要发布在公众仓库里!
   path: baidu_urls.txt ## 文本文档的地址，新链接会保存在此文本文档里
   # xz_appid: 'xxxxxx' ## 你的熊掌号 appid
@@ -210,71 +210,76 @@ symbols_count_time:
   total_symbols: false
   total_time: false
 
-leancloud_counter_security:
-  enable_sync: false
-  app_id: <<your app id>>
-  app_key: <<your app key>>
-  username: <<your username>> # Will be asked while deploying if is left blank
-  password: <<your password>> # Recommmended to be left blank. Will be asked while deploying if is left blank
+# leancloud_counter_security:
+  # enable_sync: false
+  # app_id: <<your app id>>
+  # app_key: <<your app key>>
+  # username: <<your username>> # Will be asked while deploying if is left blank
+  # password: <<your password>> # Recommmended to be left blank. Will be asked while deploying if is left blank
 
+excerpt:
+  depth: 10
+  excerpt_excludes: []
+  more_excludes: []
+  hideWholePostExcerpts: true
 
-restful:
-  # site 可配置为数组选择性生成某些属性
-  # site: ['title', 'subtitle', 'description', 'author', 'since', email', 'favicon', 'avatar']
-  site: true        # hexo.config mix theme.config
-  posts_size: 10    # 文章列表分页，0 表示不分页
-  posts_props:      # 文章列表项的需要生成的属性
-    title: true
-    slug: true
-    date: true
-    updated: true
-    comments: true
-    path: true
-    excerpt: false
-    cover: true      # 封面图，取文章第一张图片
-    content: false
-    keywords: false
-    categories: true
-    tags: true
-  categories: true         # 分类数据
-  use_category_slug: false # Use slug for filename of category data
-  tags: true               # 标签数据
-  use_tag_slug: false      # Use slug for filename of tag data
-  post: true               # 文章数据
-  pages: false             # 额外的 Hexo 页面数据, 如 About
+# restful:
+  # # site 可配置为数组选择性生成某些属性
+  # # site: ['title', 'subtitle', 'description', 'author', 'since', email', 'favicon', 'avatar']
+  # site: true        # hexo.config mix theme.config
+  # posts_size: 10    # 文章列表分页，0 表示不分页
+  # posts_props:      # 文章列表项的需要生成的属性
+    # title: true
+    # slug: true
+    # date: true
+    # updated: true
+    # comments: true
+    # path: true
+    # excerpt: false
+    # cover: true      # 封面图，取文章第一张图片
+    # content: false
+    # keywords: false
+    # categories: true
+    # tags: true
+  # categories: true         # 分类数据
+  # use_category_slug: false # Use slug for filename of category data
+  # tags: true               # 标签数据
+  # use_tag_slug: false      # Use slug for filename of tag data
+  # post: true               # 文章数据
+  # pages: false             # 额外的 Hexo 页面数据, 如 About
 
 
 # hexo-generator-amp
 # The following settings is the quick start options.
-generator_amp:
-  templateDir: amp-template
-  assetDistDir: amp-dist
-  logo:
-    path: sample/sample-logo.png
-    width: 600 # width <= 600px
-    height: 60  # width <= 60px
-  substituteTitleImage:
-    path: sample/sample-substituteTitleImage.png
-    width: 1024 # width >= 696px
-    height: 800
-  placeholderImg:
-    path: sample/sample-placeholder.png
-  generateAmpPath: amp/article/:abbrlink.html   #(optional) Custom AMP HTML Path
-  theme:
-    menu:   #(optional) Sample AMP template's menu option
-      首页: /   #(optional) example menu
-      归档: /archives   #(optional) example menu
-      #about: /about
-      #tags: /tags
-      #categories: /categories
-      #links: /links
-      自话: /intro
-      # 博萃: /blogroll
-    category_posts: false   #(optional) Enable category posts
-    category_posts_detailed: false   #(optional) Enable detailed category posts
-    latests: true   #(optional) Enable latests posts
-    list_limts: 3   #(optional) This option limit the number of display in the above lists (default:5)
-  cache: hexo-generator-amp-cached.json   #(optional) Enable cache (Improve generation speed)
+# generator_amp:
+  # templateDir: amp-template
+  # assetDistDir: amp-dist
+  # logo:
+    # path: sample/sample-logo.png
+    # width: 600 # width <= 600px
+    # height: 60  # width <= 60px
+  # substituteTitleImage:
+    # path: sample/sample-substituteTitleImage.png
+    # width: 1024 # width >= 696px
+    # height: 800
+  # placeholderImg:
+    # path: sample/sample-placeholder.png
+  # generateAmpPath: amp/article/:abbrlink.html   #(optional) Custom AMP HTML Path
+  # theme:
+    # menu:   #(optional) Sample AMP template's menu option
+      # 首页: /   #(optional) example menu
+      # 归档: /archives   #(optional) example menu
+      # #about: /about
+      # #tags: /tags
+      # #categories: /categories
+      # #links: /links
+      # 自话: /intro
+      # # 博萃: /blogroll
+    # category_posts: false   #(optional) Enable category posts
+    # category_posts_detailed: false   #(optional) Enable detailed category posts
+    # latests: true   #(optional) Enable latests posts
+    # list_limts: 3   #(optional) This option limit the number of display in the above lists (default:5)
+  # cache: hexo-generator-amp-cached.json   #(optional) Enable cache (Improve generation speed)
 
 # aplayer:
   # meting: true
