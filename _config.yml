@@ -141,7 +141,7 @@ theme: next
     # repo: git@github.com:budaig/budaig.github.com.git
     # branch: master
 deploy: # github coding 同时部署
-    - type: git
+    # - type: git
     # repo: git@github.com:budaig/budaig.github.com.git,master
     # Multiple repositories
      # github: git@gitbdg:budaig/budaig.github.com.git,master
@@ -149,7 +149,7 @@ deploy: # github coding 同时部署
      github: https://github.com/budaig/budaig.github.com.git,master
      coding: https://e.coding.net/budaim/budaim.git,coding-pages
      #coding: git@codingbdg:budaig/budaig.git,coding-pages
-    - type: baidu_url_submitter
+    # - type: baidu_url_submitter
 # - type: baidu_xz_url_submitter
 
 # Security
