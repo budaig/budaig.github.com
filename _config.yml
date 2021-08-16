@@ -136,13 +136,20 @@ theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
+# deploy:
+    # type: git
+    # repo: git@github.com:budaig/budaig.github.com.git
+    # branch: master
 deploy: # github coding 同时部署
-- type: git
-  repo: 
-     github: git@gitbdg:budaig/budaig.github.com.git,master
-     coding: git@e.coding.net:budaim/budaim.git,coding-pages
+    # - type: git
+    # repo: git@github.com:budaig/budaig.github.com.git,master
+    # Multiple repositories
+     # github: git@gitbdg:budaig/budaig.github.com.git,master
+     # coding: git@e.coding.net:budaig/budaig/budaig.git,coding-pages
+     github: https://github.com/budaig/budaig.github.com.git,master
+     coding: https://e.coding.net/budaim/budaim.git,coding-pages
      #coding: git@codingbdg:budaig/budaig.git,coding-pages
-- type: baidu_url_submitter
+# - type: baidu_url_submitter
 # - type: baidu_xz_url_submitter
 
 # Security
