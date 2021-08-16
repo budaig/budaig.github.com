@@ -149,7 +149,7 @@ deploy: # github coding 同时部署
      github: https://github.com/budaig/budaig.github.com.git,master
      coding: https://e.coding.net/budaim/budaim.git,coding-pages
      #coding: git@codingbdg:budaig/budaig.git,coding-pages
-# - type: baidu_url_submitter
+ - type: baidu_url_submitter
 # - type: baidu_xz_url_submitter
 
 # Security
@@ -181,14 +181,14 @@ abbrlink:
   auto_date: false #enable auto date, it can auto fill the date by time today
   force: false #enable force mode,in this mode, the plugin will ignore the cache, and calc the abbrlink for every post even it already had abbrlink.
 
-# baidu_url_submit:
-  # count: 3 ## 比如3，代表提交最新的三个链接
-  # host: www.rixin.win ## 在百度站长平台中注册的域名
-  # token: L4PiiYWHNRZdoIF8 ## 请注意这是您的秘钥，请不要发布在公众仓库里!
-  # path: baidu_urls.txt ## 文本文档的地址，新链接会保存在此文本文档里
-  # xz_appid: 'xxxxxx' ## 你的熊掌号 appid
-  # xz_token: 'xxxxxx' ## 你的熊掌号 token
-  # xz_count: 10 ## 从所有的提交的数据当中选取最新的10条,该数量跟你的熊掌号而定
+baidu_url_submit:
+  count: 3 ## 比如3，代表提交最新的三个链接
+  host: www.rixin.win ## 在百度站长平台中注册的域名
+  token: L4PiiYWHNRZdoIF8 ## 请注意这是您的秘钥，请不要发布在公众仓库里!
+  path: baidu_urls.txt ## 文本文档的地址，新链接会保存在此文本文档里
+  xz_appid: 'xxxxxx' ## 你的熊掌号 appid
+  xz_token: 'xxxxxx' ## 你的熊掌号 token
+  xz_count: 10 ## 从所有的提交的数据当中选取最新的10条,该数量跟你的熊掌号而定
 
 # hexo default is empty, change to exact languages, and add xx.yml under your theme languages dir.
 # language: [zh,en]
