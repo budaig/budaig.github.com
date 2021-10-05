@@ -1,4 +1,5 @@
 ---
+name: 简体中文
 title:
   archive: 归档
   category: 分类
@@ -30,7 +31,6 @@ post:
   modified: 更新
   edit: 编辑文章
   in: 分类
-  more: 更多
   read_more: 阅读全文
   untitled: 未命名
   sticky: 置顶
@@ -39,13 +39,16 @@ post:
   read_qr: 移动设备 扫码阅读
   shareto: 分享至
   copyright:
-    author: 文章作者
-    link: 文章链接
+    author: 本文作者
+    link: 本文链接
+    post_author: 原作者
+    post_link: 原文链接
     license_title: 版权声明
     post_lastupdate: 最后更新
     license_content: "本博客文章除特别声明外，均采用 %s 许可协议。转载请注明出处！"
 footer:
   powered: "Powered by %s"
+  hosted: "Hosted by %s"
   theme: Theme
   total_views: 总访问量
   total_visitors: 总访客数
@@ -68,9 +71,12 @@ state:
   categories: 分类
 search:
   placeholder: 搜索...
+  empty: "没有找到任何搜索结果：%s"
+  hits_time: "找到 %s 个搜索结果（用时 %s 毫秒）"
+  hits: "找到 %s 个搜索结果"
 cheers:
   um: 嗯..
-  ok: OK
+  ok: 还行
   nice: 不错
   good: 很好
   great: 非常好
@@ -82,7 +88,7 @@ symbol:
   colon: "："
 reward:
   donate: 赞赏
-  wechatpay: 微信支付
+  wechatpay: 微信
   alipay: 支付宝
   paypal: PayPal
   bitcoin: 比特币
@@ -92,6 +98,8 @@ accessibility:
   nav_toggle: 切换导航栏
   prev_page: 上一页
   next_page: 下一页
+  back_to_top: 返回顶部
+  select_lang: 选择语言
 symbols_count_time:
   count: 字数
   count_total: 字数总计
