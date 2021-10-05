@@ -621,7 +621,7 @@ waline:
 disqus:
   enable: false
   shortname:
-  count: true
+  count: false
 
 # DisqusJS
 # For more information: https://disqusjs.skk.moe
