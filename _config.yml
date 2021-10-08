@@ -136,20 +136,13 @@ theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
-# deploy:
-    # type: git
-    # repo: git@github.com:budaig/budaig.github.com.git
-    # branch: master
 deploy: # github coding 同时部署
-    # - type: git
-    # repo: git@github.com:budaig/budaig.github.com.git,master
-    # Multiple repositories
-     # github: git@gitbdg:budaig/budaig.github.com.git,master
-     # coding: git@e.coding.net:budaig/budaig/budaig.git,coding-pages
-     github: https://github.com/budaig/budaig.github.com.git,master
-     coding: https://e.coding.net/budaim/budaim.git,coding-pages
+- type: git
+  repo: 
+     github: git@gitbdg:budaig/budaig.github.com.git,master
+     coding: git@e.coding.net:budaim/budaim.git,coding-pages
      #coding: git@codingbdg:budaig/budaig.git,coding-pages
-    # - type: baidu_url_submitter
+- type: baidu_url_submitter
 # - type: baidu_xz_url_submitter
 
 # Security
@@ -186,9 +179,9 @@ baidu_url_submit:
   host: www.rixin.win ## 在百度站长平台中注册的域名
   token: L4PiiYWHNRZdoIF8 ## 请注意这是您的秘钥，请不要发布在公众仓库里!
   path: baidu_urls.txt ## 文本文档的地址，新链接会保存在此文本文档里
-  xz_appid: 'xxxxxx' ## 你的熊掌号 appid
-  xz_token: 'xxxxxx' ## 你的熊掌号 token
-  xz_count: 10 ## 从所有的提交的数据当中选取最新的10条,该数量跟你的熊掌号而定
+  # xz_appid: 'xxxxxx' ## 你的熊掌号 appid
+  # xz_token: 'xxxxxx' ## 你的熊掌号 token
+  # xz_count: 10 ## 从所有的提交的数据当中选取最新的10条,该数量跟你的熊掌号而定
 
 # hexo default is empty, change to exact languages, and add xx.yml under your theme languages dir.
 # language: [zh,en]
@@ -217,12 +210,12 @@ symbols_count_time:
   total_symbols: false
   total_time: false
 
-leancloud_counter_security:
-  enable_sync: false
-  app_id: <<your app id>>
-  app_key: <<your app key>>
-  username: <<your username>> # Will be asked while deploying if is left blank
-  password: <<your password>> # Recommmended to be left blank. Will be asked while deploying if is left blank
+# leancloud_counter_security:
+  # enable_sync: false
+  # app_id: <<your app id>>
+  # app_key: <<your app key>>
+  # username: <<your username>> # Will be asked while deploying if is left blank
+  # password: <<your password>> # Recommmended to be left blank. Will be asked while deploying if is left blank
 
 excerpt:
   depth: 10
