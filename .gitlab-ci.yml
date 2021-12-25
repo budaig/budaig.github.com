@@ -1,4 +1,4 @@
-image: node:14
+image: node:14-alpine # use nodejs v14 LTS
 
 cache:
   paths:
@@ -16,5 +16,5 @@ pages:
     paths:
       - public
   only:
-    - master
+    - pages
         
