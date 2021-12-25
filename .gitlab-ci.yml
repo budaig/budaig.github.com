@@ -1,0 +1,20 @@
+image: node:14
+
+cache:
+  paths:
+  - node_modules/
+
+before_script:
+  - ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+  - npm install hexo-cli -g
+  - npm install
+
+pages:
+  script:
+    - hexo generate
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
+        
