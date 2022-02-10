@@ -31,7 +31,8 @@ keyword: 日新知 知诺 布袋小知诺 布袋知诺 zhinuo 知行诺一 # you
 # url: http://www.zhinuo.space
 # url: http://bdg.zhinuo.space
 # url: http://www.zhinuo.site
-url: http://www.rixin.win
+# url: http://www.rixin.win
+url: http://www.887978.xyz
 root: / 
 permalink: article/:abbrlink.html      # :category/:id.html   #:id-:title.html
 permalink_default:
@@ -209,6 +210,13 @@ symbols_count_time:
   time: false
   total_symbols: false
   total_time: false
+
+# leancloud_counter_security:
+  # enable_sync: false
+  # app_id: <<your app id>>
+  # app_key: <<your app key>>
+  # username: <<your username>> # Will be asked while deploying if is left blank
+  # password: <<your password>> # Recommmended to be left blank. Will be asked while deploying if is left blank
 
 excerpt:
   depth: 10
