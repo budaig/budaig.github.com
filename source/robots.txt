@@ -9,4 +9,4 @@ Allow: /
 Allow: /archives/
 Allow: /categories/
 Allow: /tags/
-Sitemap: http://www.rixin.win/sitemap.xml
+Sitemap: http://www.887978.xyz/sitemap.xml
