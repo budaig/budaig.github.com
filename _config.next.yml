@@ -252,10 +252,10 @@ read_more_btn: true
 
 # Post meta display settings
 post_meta:
-  item_text: true
+  item_text: false
   created_at: true
   updated_at:
-    enable: true
+    enable: false
     another_day: true
   categories: true
 
@@ -296,9 +296,9 @@ follow_me:
 # Dependencies: https://github.com/sergeyzwezdin/hexo-related-posts
 related_posts:
   enable: true
-  title: # Custom header, leave empty to use the default one
-  display_in_home: false
-
+  enable_env_name: prod
+  filter_threshold: 0.3
+  related_count: 5
 
 # Post edit
 # Easily browse and edit blog source code online.

@@ -57,7 +57,6 @@ skip_render:
 new_post_name: :title.md # File name of new posts
 default_layout: post
 titlecase: false # Transform title into titlecase
-external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
 post_asset_folder: true
@@ -92,9 +91,15 @@ date_format_full: YYYY年MM月DD日@HH:mm
 per_page: 10
 pagination_dir: page
 
-topindex_generator:
+index_generator:
+  path: ''
   per_page: 10
   order_by: -date
+  pagination_dir: page
+
+# topindex_generator:
+  # per_page: 10
+  # order_by: -date
 
 jsonContent:
   meta: false
@@ -147,14 +152,14 @@ deploy: # github coding 同时部署
 # - type: baidu_xz_url_submitter
 
 # Security
-## https://github.com/MikeCoder/hexo-blog-encrypt 密码不能为纯数字
+## https://github.com/D0n9X1n/hexo-blog-encrypt 密码不能为纯数字
 encrypt:
   abstract: 本文已隐藏, 请输入密码浏览.
   message: 您好, 请输入密码浏览.
   tags:
   - {name: tagName, password: 密码A}
   - {name: tagName, password: 密码B}
-  template: <div id="hexo-blog-encrypt" data-wpm="{{hbeWrongPassMessage}}" data-whm="{{hbeWrongHashMessage}}"><div class="hbe-input-container"><input type="password" id="hbePass" placeholder="{{hbeMessage}}" /><label>{{hbeMessage}}</label><div class="bottom-line"></div></div><script id="hbeData" type="hbeData" data-hmacdigest="{{hbeHmacDigest}}">{{hbeEncryptedData}}</script></div>
+  theme: default
   wrong_pass_message: 抱歉, 这个密码看着不太对, 请再试试.
   wrong_hash_message: 抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.
   
