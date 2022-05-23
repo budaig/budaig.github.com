@@ -922,11 +922,6 @@ vendors:
   # Available values: local | jsdelivr | unpkg | cdnjs | custom
   # Dependencies for `plugins: local`: https://github.com/next-theme/plugins
   plugins: jsdelivr
-
-
-
-
-
   # Custom CDN URL
   # For example:
   # custom_cdn_url: https://cdn.jsdelivr.net/npm/${npm_name}@${version}/${minified}
@@ -937,6 +932,5 @@ vendors:
 # Accelerate delivery of static files using a CDN
 # The js option is only valid when vendors.internal is local.
 css: css
-
 js: js
 images: images
