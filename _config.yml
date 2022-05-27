@@ -229,6 +229,13 @@ excerpt:
   more_excludes: []
   hideWholePostExcerpts: true
 
+SWRacing:
+  enable: true              # 是否使用sw
+  register: true            # true: 注册sw | false: 注销
+  file: sw.js               # sw的文件名
+  location: body_end      # 插入页面的位置 https://hexo.io/zh-cn/api/injector#entry-lt-string-gt
+  page: home             # 插入到哪些页面 https://hexo.io/zh-cn/api/injector#to-lt-string-gt
+
 # restful:
   # # site 可配置为数组选择性生成某些属性
   # # site: ['title', 'subtitle', 'description', 'author', 'since', email', 'favicon', 'avatar']
