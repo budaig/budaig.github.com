@@ -617,7 +617,7 @@ waline:
   # libUrl: https://unpkg.com/@waline/client@3.0.1/dist/waline.js
 
   # Waline CSS styles CDN url, you can set this to your preferred CDN  
-  cssUrl: https://unpkg.com/@waline/client@3.0.1/dist/waline.css
+  # cssUrl: https://unpkg.com/@waline/client@3.0.1/dist/waline.css
 
   # Custom locales
   locale:
