@@ -306,6 +306,7 @@ related_posts:
   title: # Custom header, leave empty to use the default one
   display_in_home: false
 
+
 # Post edit
 # Easily browse and edit blog source code online.
 post_edit:
@@ -437,10 +438,10 @@ github_banner:
 # ---------------------------------------------------------------
 
 font:
-  enable: true
+  enable: false
 
   # Uri of fonts host, e.g. https://fonts.googleapis.com (Default).
-  host: https://fonts.geekzu.org
+  host:
 
   # Font options:
   # `external: true` will load this font family from `host` above.
@@ -614,10 +615,10 @@ waline:
   serverURL: https://rxzwaline.vercel.app
 
   # Waline library CDN url, you can set this to your preferred CDN
-  # libUrl: https://unpkg.com/@waline/client@3.0.1/dist/waline.js
+  # libUrl: https://unpkg.com/@waline/client@2.0.5/dist/waline.js
 
   # Waline CSS styles CDN url, you can set this to your preferred CDN  
-  # cssUrl: https://unpkg.com/@waline/client@3.0.1/dist/waline.css
+  # cssUrl: https://unpkg.com/@waline/client@2.0.5/dist/waline.css
 
   # Custom locales
   locale:
@@ -963,7 +964,8 @@ vendors:
   # The default CDN provider of third-party plugins.
   # Available values: local | jsdelivr | unpkg | cdnjs | custom
   # Dependencies for `plugins: local`: https://github.com/next-theme/plugins
-  plugins: unpkg
+  plugins: cdnjs
+
   # Custom CDN URL
   # For example:
   # custom_cdn_url: https://cdn.jsdelivr.net/npm/${npm_name}@${version}/${minified}
@@ -974,5 +976,6 @@ vendors:
 # Accelerate delivery of static files using a CDN
 # The js option is only valid when vendors.internal is local.
 css: css
+
 js: js
 images: images
