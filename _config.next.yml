@@ -691,6 +691,8 @@ changyan:
   enable: false
   appid:
   appkey:
+  # Show comments count
+  count: false
 
 # LiveRe comments system
 # You can get your uid from https://livere.com/insight/myCode (General web site)
@@ -970,7 +972,7 @@ vendors:
   # The default CDN provider of third-party plugins.
   # Available values: local | jsdelivr | unpkg | cdnjs | custom
   # Dependencies for `plugins: local`: https://github.com/next-theme/plugins
-  plugins: cdnjs
+  plugins: jsdelivr
 
   # Custom CDN URL
   # For example:
