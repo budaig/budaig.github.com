@@ -11,6 +11,13 @@ zh-CN:
     tags: 标签
     links: 链接
     intro: 自话
+  sidebar:
+    links: 链接
+  widget:
+    github: 在 GitHub 上关注我
+    chat: 聊天
+  reward:
+    comment: 支持一根棒棒糖！
 en:
   name: English
   disqus: en
@@ -23,6 +30,8 @@ en:
     categories: Categories
     archives: Archives
     intro: Intro
+    sidebar:
+        links: Friends
 zh-TW:
   name: Chinese
   disqus: zh-TW
