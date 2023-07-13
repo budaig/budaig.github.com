@@ -47,6 +47,7 @@ post:
     license_title: 版权声明
     post_lastupdate: 最后更新
     license_content: "本博客文章除特别声明外，均采用 %s 许可协议。转载请注明出处！"
+    license_content_reprint: "本文章为转载文章，已获转载许可。转载请注明出处！"
 footer:
   powered: "Powered by %s"
   hosted: "Hosted by %s"
@@ -54,7 +55,7 @@ footer:
   total_views: 总访问量
   total_visitors: 总访客数
 widget:
-  github: Follow me on GitHub
+  github: 在 GitHub 上关注我
   chat: 聊天
 counter:
   tag_cloud:
