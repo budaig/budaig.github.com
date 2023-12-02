@@ -21,7 +21,7 @@ jobs:
       # 设置 node.js 环境
       uses: actions/setup-node@v2
       with:
-        node-version: '20'
+        node-version: '16'
 
     - name: Get Latest Commit Message
       run: |
