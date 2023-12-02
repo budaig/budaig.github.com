@@ -1,4 +1,4 @@
-image: node:14-alpine # use nodejs v14 LTS
+image: node:latest # use nodejs v14 LTS
 
 cache:
   paths:
