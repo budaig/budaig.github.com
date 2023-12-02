@@ -15,13 +15,13 @@ jobs:
 
     steps:
     - name: Checkout codes
-      uses: actions/checkout@main
+      uses: actions/checkout@v3
 
     - name: Setup node
       # 设置 node.js 环境
-      uses: actions/setup-node@main
+      uses: actions/setup-node@v2
       with:
-        node-version: '20.x'
+        node-version: '20'
 
     - name: Get Latest Commit Message
       run: |
@@ -29,7 +29,7 @@ jobs:
 
     - name: Cache node modules
       # 设置包缓存目录，避免每次下载
-      uses: actions/cache@main
+      uses: actions/cache@v2
       id: cache-modules
       with:
         path: ~/.npm
