@@ -1,4 +1,4 @@
-image: node:16 # use nodejs v14 LTS
+image: node:20 # use nodejs v14 LTS
 
 cache:
   paths:
