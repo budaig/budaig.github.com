@@ -6,7 +6,6 @@
     "version": "7.0.0"
   },
   "dependencies": {
-    "@next-theme/plugins": "^8.19.1",
     "@waline/hexo-next": "^3.0.1",
     "hexo": "^7.0.0",
     "hexo-abbrlink": "^2.2.1",
