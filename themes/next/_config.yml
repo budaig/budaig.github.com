@@ -991,8 +991,8 @@ vendors:
   # The default CDN provider of third-party plugins.
   # Available values: local | jsdelivr | unpkg | cdnjs | custom
   # Dependencies for `plugins: local`: https://github.com/next-theme/plugins
-  # plugins: local
   plugins: local
+  # plugins: unpkg
 
   # Custom CDN URL
   # For example:
