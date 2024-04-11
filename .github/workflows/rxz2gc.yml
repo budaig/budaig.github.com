@@ -11,7 +11,7 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-latest # 使用最新的 Ubuntu 系统作为编译部署的环境
+    runs-on: ubuntu-20.04 # 使用最新的 Ubuntu 系统作为编译部署的环境
 
     steps:
     - name: Checkout codes
@@ -27,25 +27,56 @@ jobs:
       run: |
         git log --pretty=format:"%s from Github Actions at `date +"%Y-%m-%d %H:%M:%S"`" --date=short -n 1  > commit-message.log
 
-    - name: Cache node modules
-      # 设置包缓存目录，避免每次下载
+    # - name: Cache node modules
+      # # 设置包缓存目录，避免每次下载
+      # uses: actions/cache@v4
+      # id: cache-modules
+      # with:
+        # path: ~/.npm
+        # key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+
+    # - name: Install hexo
+      # # 下载 hexo-cli 脚手架及相关安装包
+      # run: |
+        # npm install hexo-cli -g --no-audit
+        # npm install --no-audit
+        
+    # - name: Install dependencies
+      # # 下载 hexo-cli 脚手架及相关安装包
+      # if: steps.cache-modules.outputs.cache-hit != 'true'
+      # run: | # **如果仓库里没有 package-lock.json，上传一下，npm ci 必须要有 package-lock.json**
+        # npm ci
+    # - name: Generate public files # 生成
+      # run: |
+        # hexo clean
+        # hexo generate
+        
+        
+      # 缓存 Node 模块，提高构建速度
+    - name: Get yarn cache directory path
+      id: yarn-cache-dir-path
+      run: echo "::set-output name=dir::$(yarn cache dir)"
+
+    - name: Use yarn cache
       uses: actions/cache@v4
-      id: cache-modules
+      id: yarn-cache
       with:
-        path: ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+        key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-yarn-
 
     - name: Install hexo
       # 下载 hexo-cli 脚手架及相关安装包
       run: |
-        npm install hexo-cli -g --no-audit
-        npm install --no-audit
+        yarn hexo-cli -g --no-audit
+        yarn --no-audit
         
     - name: Install dependencies
       # 下载 hexo-cli 脚手架及相关安装包
       if: steps.cache-modules.outputs.cache-hit != 'true'
       run: | # **如果仓库里没有 package-lock.json，上传一下，npm ci 必须要有 package-lock.json**
-        npm ci
+        yarn
     - name: Generate public files # 生成
       run: |
         hexo clean
