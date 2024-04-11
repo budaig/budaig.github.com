@@ -38,7 +38,6 @@ jobs:
     - name: Install hexo
       # 下载 hexo-cli 脚手架及相关安装包
       run: |
-        rm -rf node_modules && rm -rf package-lock.json && npm install
         npm install hexo-cli -g --no-audit
         npm install --no-audit
 
@@ -46,7 +45,8 @@ jobs:
       # 下载 hexo-cli 脚手架及相关安装包
       if: steps.cache-modules.outputs.cache-hit != 'true'
       run: | # **如果仓库里没有 package-lock.json，上传一下，npm ci 必须要有 package-lock.json**
-        npm ci
+        # npm ci
+        rm -rf package-lock.json && npm install
     - name: Generate public files # 生成
       run: |
         hexo clean
