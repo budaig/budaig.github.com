@@ -69,8 +69,8 @@ jobs:
     - name: Install hexo
       # 下载 hexo-cli 脚手架及相关安装包
       run: |
-        yarn hexo-cli -g --no-audit
-        yarn --no-audit
+        yarn add hexo-cli
+        yarn
         
     - name: Install dependencies
       # 下载 hexo-cli 脚手架及相关安装包
