@@ -38,10 +38,10 @@ jobs:
     - name: Install hexo
       # 下载 hexo-cli 脚手架及相关安装包
       run: |
-        npm update
+        rm -rf node_modules && rm -rf package-lock.json && npm install
         npm install hexo-cli -g --no-audit
         npm install --no-audit
-        
+
     - name: Install dependencies
       # 下载 hexo-cli 脚手架及相关安装包
       if: steps.cache-modules.outputs.cache-hit != 'true'
@@ -115,5 +115,5 @@ jobs:
         git add .
         git commit -F ../commit-message.log
         git push --force --quiet "https://${Coding_Username}:${Coding_Token}@${Coding_Pages}" master:master
-        # git push --force --quiet "https://${Coding_Username}:${Coding_Token}@${Coding_Pages}" coding-pages:coding-pages        
-      
+        # git push --force --quiet "https://${Coding_Username}:${Coding_Token}@${Coding_Pages}" coding-pages:coding-pages
+
