@@ -40,6 +40,7 @@ jobs:
       run: |
         npm install hexo-cli -g --no-audit
         rm -rf node_modules && rm -rf package-lock.json && npm install --no-audit
+        npm install
 
     - name: Install dependencies
       # 下载 hexo-cli 脚手架及相关安装包
