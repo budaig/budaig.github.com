@@ -29,7 +29,7 @@ jobs:
 
     - name: Cache node modules
       # 设置包缓存目录，避免每次下载
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       id: cache-modules
       with:
         path: ~/.npm
