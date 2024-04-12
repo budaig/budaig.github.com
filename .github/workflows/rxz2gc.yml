@@ -70,8 +70,7 @@ jobs:
     - name: Install hexo
       # 下载 hexo-cli 脚手架及相关安装包
       run: |
-        yarn add hexo-cli
-        yarn
+        yarn global add hexo-cli
 
     - name: Generate public files # 生成
       run: |
