@@ -1,3 +1,10 @@
+### 解决.gitignore忽略文件不生效问题--清除本地缓存（改变成未track状态）
+// 清除本地所有被追踪的分支
+#git rm -r --cached .
+#git add .
+#git commit -m 'update .gitignore'
+#git push -u origin  <本地分支>:<同名远程分支可不写>
+
 .DS_Store
 Thumbs.db
 db.json
@@ -15,6 +22,10 @@ cmd2Ruby.lnk
 4rxz.pub
 4rxz
 .gitignore
+*.sh240*
+*.config240*
+*.sh20240*
+*.config20240*
 _config.yml4site
 .travis.yml
 deploy.sh
