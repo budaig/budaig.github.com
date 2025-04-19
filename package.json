@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "hexo": {
-    "version": "7.1.1"
+    "version": "7.3.0"
   },
   "dependencies": {
     "@next-theme/plugins": "^8.23.0",
@@ -35,5 +35,6 @@
     "hexo-symbols-count-time": "^0.7.1",
     "hexo-util": "^3.3.0",
     "hexo-wordcount": "^6.0.1"
-  }
+  },
+  "packageManager": "yarn@4.9.1"
 }
