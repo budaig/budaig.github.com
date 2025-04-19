@@ -25,7 +25,7 @@ jobs:
         node-version: '22.x'
         cache: 'yarn'
 
-    - name: Set yarn version
+    - name: Set Yarn version
       run: yarn set version berry
 
     - name: Install dependencies
@@ -33,14 +33,19 @@ jobs:
         yarn add hexo-cli hexo --dev
         yarn install
 
+    - name: Configure Yarn PnP
+      run: |
+        yarn config set nodeLinker pnp
+        yarn config set pnpMode loose
+
     - name: Get Latest Commit Message
       run: |
-        git log --pretty=format:"%s from Github Actions at `date +"%Y-%m-%d %H:%M:%S"`" --date=short -n 1  > commit-message.log
+        git log --pretty=format:"%s from Github Actions at `date +"%Y-%m-%d %H:%M:%S"`" --date=short -n 1 > commit-message.log
 
     - name: Generate public files
       run: |
-        npx hexo clean
-        npx hexo generate
+        yarn exec hexo clean
+        yarn exec hexo generate
 
     - name: Deploy 2 github
       env:
