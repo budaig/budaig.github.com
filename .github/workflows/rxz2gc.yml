@@ -30,7 +30,8 @@ jobs:
 
     - name: Install dependencies
       run: |
-        yarn add hexo-cli hexo --dev
+        yarn add hexo-cli
+        yarn dlx hexo-cli
         yarn install
 
     - name: Configure Yarn PnP
