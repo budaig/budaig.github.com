@@ -27,6 +27,7 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: '22.x'
+         cache: 'yarn'
 
     - name: Get Latest Commit Message
       run: |
@@ -58,11 +59,11 @@ jobs:
         # hexo clean
         # hexo generate
 
-      # 缓存 Node 模块，提高构建速度
-    - name: Get yarn cache directory path
-      id: yarn-cache-dir-path
-      # run: echo "::set-output name=dir::$(yarn cache dir)"
-      run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
+      # # 缓存 Node 模块，提高构建速度
+    # - name: Get yarn cache directory path
+      # id: yarn-cache-dir-path
+      # # run: echo "::set-output name=dir::$(yarn cache dir)"
+      # run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
 
     - name: Use yarn cache
       uses: actions/cache@v4
