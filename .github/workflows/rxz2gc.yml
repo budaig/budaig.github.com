@@ -26,8 +26,9 @@ jobs:
         cache: 'yarn'
 
     - name: Set Yarn version
-      run: yarn set version berry
-              yarn config get enableGlobalCache
+      run: |
+        yarn set version berry
+        yarn config get enableGlobalCache
 
     - name: Install dependencies
       run: |
