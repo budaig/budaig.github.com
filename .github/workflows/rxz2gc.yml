@@ -1,6 +1,5 @@
 name: RXZ2GC
 
-# 触发条件：在 push 到 hexo-blog-backup 分支后触发
 on:
   push:
     branches: 
@@ -11,80 +10,37 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-22.04 # 使用最新的 Ubuntu 系统作为编译部署的环境
+    runs-on: ubuntu-22.04
 
     steps:
     - name: Checkout codes
       uses: actions/checkout@v4
 
-    - name: enable corepack and set yarn version to latest stable
-      run: |
-        corepack enable
-        yarn set version berry
+    - name: Enable corepack
+      run: corepack enable
 
-    - name: Setup node
-      # 设置 node.js 环境
+    - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
         node-version: '22.x'
         cache: 'yarn'
 
+    - name: Set yarn version
+      run: yarn set version berry
+
+    - name: Install dependencies
+      run: |
+        yarn add hexo-cli hexo --dev
+        yarn install
+
     - name: Get Latest Commit Message
       run: |
         git log --pretty=format:"%s from Github Actions at `date +"%Y-%m-%d %H:%M:%S"`" --date=short -n 1  > commit-message.log
 
-    # - name: Cache node modules
-      # # 设置包缓存目录，避免每次下载
-      # uses: actions/cache@v4
-      # id: cache-modules
-      # with:
-        # path: ~/.npm
-        # key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-
-    # - name: Install hexo
-      # # 下载 hexo-cli 脚手架及相关安装包
-      # run: |
-        # npm install hexo-cli -g --no-audit
-        # # rm -rf node_modules && rm -rf package-lock.json && npm install --no-audit
-        # # npm install
-
-    # - name: Install dependencies
-      # # 下载 hexo-cli 脚手架及相关安装包
-      # if: steps.cache-modules.outputs.cache-hit != 'true'
-      # run: | # **如果仓库里没有 package-lock.json，上传一下，npm ci 必须要有 package-lock.json**
-        # npm ci
-
-    # - name: Generate public files # 生成
-      # run: |
-        # hexo clean
-        # hexo generate
-
-      # # 缓存 Node 模块，提高构建速度
-    # - name: Get yarn cache directory path
-      # id: yarn-cache-dir-path
-      # # run: echo "::set-output name=dir::$(yarn cache dir)"
-      # run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
-
-    # - name: Use yarn cache
-      # uses: actions/cache@v4
-      # id: yarn-cache
-      # with:
-        # path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-        # key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-        # restore-keys: |
-          # ${{ runner.os }}-yarn-
-
-    - name: Install hexo
-      # 下载 hexo-cli 脚手架及相关安装包
+    - name: Generate public files
       run: |
-        yarn add hexo-cli
-        yarn dlx hexo-cli
-        yarn install
-
-    - name: Generate public files # 生成
-      run: |
-        hexo clean
-        hexo generate
+        npx hexo clean
+        npx hexo generate
 
     - name: Deploy 2 github
       env:
