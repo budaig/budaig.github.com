@@ -47,8 +47,8 @@ jobs:
       run: |
         yarn dlx hexo clean
         yarn dlx hexo generate
-        hexo clean
-        hexo generate
+        # hexo clean
+        # hexo generate
 
     - name: Deploy 2 github
       env:
