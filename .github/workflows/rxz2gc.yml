@@ -17,6 +17,12 @@ jobs:
     - name: Checkout codes
       uses: actions/checkout@v4
 
+    steps:
+    - name: enable corepack and set yarn version to latest stable
+      run: |
+        corepack enable
+        yarn set version berry
+
     - name: Setup node
       # 设置 node.js 环境
       uses: actions/setup-node@v4
@@ -71,7 +77,7 @@ jobs:
     - name: Install hexo
       # 下载 hexo-cli 脚手架及相关安装包
       run: |
-        yarn global add hexo-cli
+        yarn dlx add hexo-cli
         yarn
 
     - name: Generate public files # 生成
