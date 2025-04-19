@@ -17,7 +17,6 @@ jobs:
     - name: Checkout codes
       uses: actions/checkout@v4
 
-    steps:
     - name: enable corepack and set yarn version to latest stable
       run: |
         corepack enable
