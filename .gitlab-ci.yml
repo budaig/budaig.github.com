@@ -8,8 +8,11 @@ before_script:
   - ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
   # - npm install hexo-cli -g
   # - npm install
-  - yarn global add hexo-cli
-  - yarn
+  # - yarn global add hexo-cli
+  # - yarn
+  - yarn add hexo-cli
+  - yarn dlx hexo-cli
+  - yarn install
 
 pages:
   script:
