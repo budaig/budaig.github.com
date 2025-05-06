@@ -16,7 +16,9 @@ before_script:
 
 pages:
   script:
-    - hexo generate
+    # - hexo generate
+    - yarn dlx hexo clean
+    - yarn dlx hexo generate
   artifacts:
     paths:
       - public
