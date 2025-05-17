@@ -10,13 +10,17 @@ before_script:
   # - npm install
   # - yarn global add hexo-cli
   # - yarn
+  - yarn set version berry
+  - yarn config get enableGlobalCache
   - yarn add hexo-cli
   - yarn dlx hexo-cli
   - yarn install
 
 pages:
   script:
-    - hexo generate
+    # - hexo generate
+    - yarn dlx hexo clean
+    - yarn dlx hexo generate
   artifacts:
     paths:
       - public
