@@ -86,6 +86,7 @@ open_graph:
     #fb_admins: <fb:admin_id>
     #fb_app_id: <fb:app_id>
 
+
 # ---------------------------------------------------------------
 # Menu Settings
 # ---------------------------------------------------------------
@@ -204,9 +205,6 @@ toc:
   max_depth: 6
 
 
-
-
-
 # ---------------------------------------------------------------
 # Footer Settings
 # See: https://theme-next.js.org/docs/theme-settings/footer
@@ -229,6 +227,7 @@ footer:
     color: "#ff0000"
 
   # If not defined, `author` from Hexo `_config.yml` will be used.
+  # Set to `false` to disable the copyright statement.
   copyright: 日新知
 
   # Powered by Hexo & NexT
@@ -373,7 +372,7 @@ theme_color:
 body_scrollbar:
   # Place the scrollbar over the content.
   overlay: false
-  # Present the scrollbar even if the content is not overflowing.
+  # Reserving space for the scrollbar gutter even if the content is not overflowing.
   stable: false
 
 codeblock:
@@ -394,6 +393,8 @@ codeblock:
   fold:
     enable: false
     height: 500
+  # Display language name
+  language: true
 
 back2top:
   enable: true
@@ -643,6 +644,7 @@ quicklink:
 motion:
   enable: true
   async: false
+  duration: 200
   transition:
     # All available transition variants: https://theme-next.js.org/animate/
     menu_item: fadeInDown
