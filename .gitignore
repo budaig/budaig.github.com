@@ -14,7 +14,7 @@ public/
 .deploy*/
 .misc/
 .deploy_git/
-CNAME
+#CNAME
 debug.log
 cmd2Ruby.lnk
 *.bat
