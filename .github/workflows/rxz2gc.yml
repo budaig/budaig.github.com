@@ -56,7 +56,7 @@ jobs:
       env:
         Github_Pages: github.com/budaig/budaig.github.com.git
         Github_Token: ${{ secrets.token_GitAPI }}
-      # 将编译后的博客文件推送到指定仓库
+         # 将编译后的博客文件推送到指定仓库
       run: |
         git config --global user.name "budaig"
         git config --global user.email "imovomi@gmail.com"
