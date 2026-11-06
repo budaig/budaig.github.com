@@ -937,7 +937,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next-theme/plugins@npm:^8.7.0":
+"@next-theme/plugins@npm:^8.27.0":
   version: 8.27.0
   resolution: "@next-theme/plugins@npm:8.27.0"
   dependencies:
@@ -4377,7 +4377,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "hexo-site@workspace:."
   dependencies:
-    "@next-theme/plugins": "npm:^8.7.0"
+    "@next-theme/plugins": "npm:^8.27.0"
     "@waline/hexo-next": "npm:^3.0.1"
     autoprefixer: "npm:^10.5.0"
     hexo: "npm:8.1.2"

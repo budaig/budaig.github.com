@@ -46,6 +46,12 @@ scheme: Mist
 darkmode: false
 
 
+lightdark:
+  enable: false
+  # Add @supports (color: light-dark(red, red)) check
+  check_supports: true
+
+
 # ---------------------------------------------------------------
 # Site Information Settings
 # ---------------------------------------------------------------
@@ -94,6 +100,7 @@ open_graph:
 # Key is the name of menu item. If the translation for this item is available, the translated text will be loaded, otherwise the Key name will be used. Key is case-sensitive.
 # Value before `||` delimiter is the target link, value after `||` delimiter is the name of Font Awesome icon.
 # External url should start with http:// or https://
+# External url should start with http:// or https://
 menu:
   home: / || fa fa-home
   #about: /about/ || fa fa-user
@@ -127,10 +134,13 @@ sidebar:
 
   # Manual define the sidebar width. If commented, will be default for:
   # Muse | Mist: 320
+  width_expanded: 320
   # Pisces | Gemini: 240
-  #width: 300
+  width_dual_column: 240
 
-  # Sidebar Display (only for Muse | Mist), available values:
+  # Sidebar display.
+  # Applicable to Muse | Mist and mobile of Pisces | Gemini.
+  # Available values:
   #  - post    expand on posts automatically. Default.
   #  - always  expand for all pages automatically.
   #  - hide    expand only when click on the sidebar toggle icon.
@@ -202,9 +212,6 @@ toc:
   max_depth: 6
 
 
-
-
-
 # ---------------------------------------------------------------
 # Footer Settings
 # See: https://theme-next.js.org/docs/theme-settings/footer
@@ -222,7 +229,7 @@ footer:
     # Icon name in Font Awesome. See: https://fontawesome.com/icons
     name: fa fa-heart
     # If you want to animate the icon, set it to true.
-    animated: false
+    animated: true
     # Change the color of icon, using Hex Code.
     color: "#ff0000"
 
@@ -379,7 +386,7 @@ codeblock:
   # All available themes: https://theme-next.js.org/highlight/
   theme:
     light: default
-    dark: tomorrow-night
+    dark: tomorrow-night-bright
   prism:
     light: prism
     dark: prism-dark
@@ -392,6 +399,8 @@ codeblock:
   fold:
     enable: false
     height: 500
+  # Display language name
+  language: true
 
 back2top:
   enable: true
@@ -641,6 +650,7 @@ quicklink:
 motion:
   enable: true
   async: false
+  duration: 200
   transition:
     # All available transition variants: https://theme-next.js.org/animate/
     menu_item: fadeInDown
@@ -807,6 +817,10 @@ gitalk:
   # If you want everyone visiting your site to see a uniform language, you can set a force language value
   # Available values: en | es-ES | fr | ru | zh-CN | zh-TW
   language:
+  # If you want to customize the content of the initialized Issue, please edit the body parameter.
+  # For example:
+  # body: Comments for post ${title}, see ${url}
+  body:
 
 # Utterances
 # For more information: https://utteranc.es
@@ -832,6 +846,7 @@ isso: # <data_isso>
 # AddToAny Share. See: https://www.addtoany.com
 addtoany:
   enable: false
+  # Example: bottons: [facebook, twitter]
   buttons:
     - facebook
     - twitter
@@ -855,10 +870,6 @@ google_analytics:
 # Baidu Analytics
 # See: https://tongji.baidu.com
 baidu_analytics: # <app_id>
-
-# Growingio Analytics
-# See: https://www.growingio.com
-growingio_analytics: # <project_id>
 
 # Cloudflare Web Analytics
 # See: https://www.cloudflare.com/web-analytics/
@@ -895,12 +906,12 @@ leancloud_visitors:
   enable: false
   app_id: # <your app id>
   app_key: # <your app key>
-  # Required for apps from CN region
-  server_url: # <your server url>
-  # Dependencies: https://github.com/theme-next/hexo-leancloud-counter-security
-  # If you don't care about security in leancloud counter and just want to use it directly
-  # (without hexo-leancloud-counter-security plugin), set `security` to `false`.
-  security: false
+  # # Required for apps from CN region
+  # server_url: # <your server url>
+  # # Dependencies: https://github.com/theme-next/hexo-leancloud-counter-security
+  # # If you don't care about security in leancloud counter and just want to use it directly
+  # # (without hexo-leancloud-counter-security plugin), set `security` to `false`.
+  # security: false
 
 # Another tool to show number of visitors to each article.
 # Visit https://console.firebase.google.com/u/0/ to get apiKey and projectId.
@@ -977,6 +988,13 @@ tidio:
   enable: false
   key: # Public Key, get it from dashboard. See: https://www.tidio.com/panel/settings/developer
 
+# Knocket is a 100% free live chat widget by Tencent RTC.
+# For more information: https://trtc.io/solutions/knocket
+knocket:
+  enable: false
+  async: true
+  identifier: # Get it from https://trtc.io/solutions/knocket
+
 
 # ---------------------------------------------------------------
 # CDN Settings
@@ -991,7 +1009,8 @@ vendors:
   # The default CDN provider of third-party plugins.
   # Available values: local | jsdelivr | unpkg | cdnjs | custom
   # Dependencies for `plugins: local`: https://github.com/next-theme/plugins
-  plugins: jsdelivr
+  plugins: local
+  # plugins: unpkg
 
   # Custom CDN URL
   # For example:
